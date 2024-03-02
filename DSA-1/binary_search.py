@@ -15,7 +15,6 @@ def binarySearch(array, x, low, high):
  
     return -1
  
- 
 array = [2, 4, 5, 7, 14, 17, 19, 22]
 x = 22
  
