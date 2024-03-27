@@ -118,46 +118,116 @@
 
 
 
-class BinaryTreeNode:
-    def __init__(self, data):
-        self.data = data
-        self.leftChild = None
-        self.rightChild = None
+# class BinaryTreeNode:
+#     def __init__(self, data):
+#         self.data = data
+#         self.leftChild = None
+#         self.rightChild = None
 
 
-def preorder(root):
-    # if root is None,return
-    if root is None:
-        return
-    # print the current node
-    print(root.data, end=" ,")
-    # traverse left subtree
-    preorder(root.leftChild)
+# def preorder(root):
+#     # if root is None,return
+#     if root is None:
+#         return
+#     # print the current node
+#     print(root.data, end=" ,")
+#     # traverse left subtree
+#     preorder(root.leftChild)
 
-    # traverse right subtree
-    preorder(root.rightChild)
-
-
-def insert(root, newValue):
-    # if binary search tree is empty, create a new node and declare it as root
-    if root is None:
-        root = BinaryTreeNode(newValue)
-        return root
-    # if newValue is less than value of data in root, add it to left subtree and proceed recursively
-    if newValue < root.data:
-        root.leftChild = insert(root.leftChild, newValue)
-    else:
-        # if newValue is greater than value of data in root, add it to right subtree and proceed recursively
-        root.rightChild = insert(root.rightChild, newValue)
-    return root
+#     # traverse right subtree
+#     preorder(root.rightChild)
 
 
-root = insert(None, 50)
-insert(root, 20)
-insert(root, 53)
-insert(root, 11)
-insert(root, 22)
-insert(root, 52)
-insert(root, 78)
-print("Preorder traversal of the binary tree is:")
-preorder(root)
+# def insert(root, newValue):
+#     # if binary search tree is empty, create a new node and declare it as root
+#     if root is None:
+#         root = BinaryTreeNode(newValue)
+#         return root
+#     # if newValue is less than value of data in root, add it to left subtree and proceed recursively
+#     if newValue < root.data:
+#         root.leftChild = insert(root.leftChild, newValue)
+#     else:
+#         # if newValue is greater than value of data in root, add it to right subtree and proceed recursively
+#         root.rightChild = insert(root.rightChild, newValue)
+#     return root
+
+
+# root = insert(None, 50)
+# insert(root, 20)
+# insert(root, 53)
+# insert(root, 11)
+# insert(root, 22)
+# insert(root, 52)
+# insert(root, 78)
+# print("Preorder traversal of the binary tree is:")
+# preorder(root)
+
+
+# class BinaryTree:
+#     def __init__(self,data):
+#         self.data = data
+#         self.leftchild = None
+#         self.rightchild = None
+
+# def preorder(root):
+#     if root is None:
+#         return
+#     print(root.data, end=", ")
+#     preorder(root.leftchild)
+#     preorder(root.rightchild)
+
+# def insert(root, value):
+#     if root is None:
+#         root = BinaryTree(value)
+#         return root
+#     elif value < root.data:
+#         root.leftchild = insert(root.leftchild, value)
+#     else:
+#         root.rightchild = insert(root.rightchild, value)
+#     return root
+
+# root = insert(None,78)
+# insert(root,43)
+# insert(root,23)
+# insert(root,12)
+# insert(root,52)
+# insert(root,89)
+# insert(root,19)
+# print(preorder(root))
+
+
+# class BinaryTree:
+#     def __init__(self,data):
+#         self.data = data
+#         self.LChild = None
+#         self.RChild = None
+
+# def postorder(root):
+#     if root is None:
+#         return
+#     print(root.data, end=", ")
+#     postorder(root.LChild)
+#     postorder(root.RChild)
+
+# def insert(root, value):
+#     if root is None:
+#         root = BinaryTree(value)
+#         return root
+    
+#     elif value < root.data:
+#         root.LChild = insert(root.LChild, value)
+#     else:
+#         root.RChild = insert(root.RChild, value)
+#     return root
+
+# root = insert(None, 78)
+# insert(root,43)
+# insert(root,23)
+# insert(root,12)
+# insert(root,52)
+# insert(root,89)
+# insert(root,19)
+# print(postorder(root))
+
+
+
