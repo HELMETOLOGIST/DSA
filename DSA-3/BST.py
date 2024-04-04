@@ -52,7 +52,7 @@ class BinarySearchTree:
     
     def _search_recursive(self, root, key):
         if root is None or root.key == key:
-            return root
+            return root.key if root else None
         if key < root.key:
             return self._search_recursive(root.left, key)
         return self._search_recursive(root.right, key)
@@ -105,6 +105,36 @@ class BinarySearchTree:
         while node.right is not None:
             node = node.right
         return node.key
+    
+    def find_closest_value(self, target):
+        closest = float('inf')  # Initialize closest to positive infinity
+        return self._find_closest_value_recursive(self.root, target, closest)
+    
+    def _find_closest_value_recursive(self, node, target, closest):
+        if node is None:
+            return closest
+        if abs(node.key - target) < abs(closest - target):
+            closest = node.key
+        if target < node.key:
+            return self._find_closest_value_recursive(node.left, target, closest)
+        elif target > node.key:
+            return self._find_closest_value_recursive(node.right, target, closest)
+        else:
+            return closest
+        
+    def is_valid_bst(self):
+        return self._is_valid_bst_recursive(self.root, float('-inf'), float('inf'))
+
+    def _is_valid_bst_recursive(self, node, min_val, max_val):
+        if node is None:
+            return True
+        
+        if node.key <= min_val or node.key >= max_val:
+            return False
+        
+        return (self._is_valid_bst_recursive(node.left, min_val, node.key) and
+                self._is_valid_bst_recursive(node.right, node.key, max_val))
+        
 
 # Example usage:
 bst = BinarySearchTree()
@@ -122,8 +152,12 @@ print("Postorder traversal:", bst.postorder_traversal())
 
 print("Minimum element:", bst.minimum())
 print("Maximum element:", bst.maximum())
+ 
+print("Closet Value:", bst.find_closest_value(90))
 
 bst.delete(30)
 print("Inorder traversal after deleting 30:", bst.inorder_traversal())
 
 print("Searching for 40:", bst.search(40))
+
+print("valid bst:", bst.is_valid_bst())
