@@ -40,7 +40,7 @@ class MaxHeap:
         if len(self.heap) == 1:
             return self.heap.pop(0)
         self.swap(0,len(self.heap)-1)
-        self.heap.pop()
+        self.heap.pop() 
         self.heap_down(0)
         return
     

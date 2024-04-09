@@ -738,3 +738,503 @@
 #     if largest != index:
 #         arr[largest], arr[index] = arr[index], arr[largest]
 #         heapify(arr, n, largest)
+
+
+
+# def heap_sort(arr):
+#     n = len(arr)
+#     for i in range(n//2, -1, -1):
+#         heapify(arr, n, i)
+#     for i in range(n-1, 0, -1):
+#         arr[0], arr[i] = arr[i], arr[i]
+#         heapify(arr, i, 0)
+#     return print(arr)
+# def heapify(arr, n, index):
+#     left = (2*index) + 1
+#     right = (2*index) + 2
+#     largest = index
+#     if left < n and arr[left] > arr[largest]:
+#         largest = left
+#     if right < n and arr[right] > arr[largest]:
+#         largest = right
+#     if largest != index:
+#         arr[largest], arr[index] = arr[index], arr[largest]
+#         heapify(arr, n, largest)
+# array = [4,56,12,37,89,19]
+# heap_sort(array)
+
+
+# class TreeNode:
+#     def __init__(self, key):
+#         self.key = key
+#         self.left = None
+#         self.right = None
+# class BinarySTree:
+#     def __init__(self):
+#         self.root = None
+#     def insert(self, key)
+#         self.root = self.insert_recursive(self.root, key)
+#     def insert_recursive(self, root, key):
+#         if root is None:
+#             return TreeNode(key)
+#         if key < root.key:
+#             root.left = self.insert_recursive(root.left, key)
+#         else:
+#             root.right = self.insert_recursive(root.right, key)
+#         return root
+
+# class TreeNode:
+#     def __init__(self, key):
+#         self.key = key
+#         self.left = None
+#         self.right = None
+# class BinarySTree:
+#     def __init__(self):
+#         self.root = None
+#     def insert(self, key):
+#         self.root = self.insert_recursive(self.root, key)
+#     def insert_recursive(self, root, key):
+#         if root is None:
+#             return TreeNode(key)
+#         if key < root.key:
+#             root.left = self.insert_recursive(root.left, key)
+#         else:
+#             root.right = self.insert_recursive(root.right, key)
+#         return root
+#     def delete(self, key):
+#         self.root = self.delete_recursive(self.root, key)
+#     def delete_recursive(self, root, key):
+#         if root is None:
+#             return root
+#         if key < root.key:
+#             root.left = self.delete_recursive(root.left, key)
+#         elif key > root.key:
+#             root.right = self.delete_recursive(root.right, key)
+#         else:
+#             if root.left is None:
+#                 return root.right
+#             elif root.right is None:
+#                 return root.left
+#             else:
+#                 success = self.min_value_node(root.right)
+#                 root.key = success.key
+#                 root.right = self.delete_recursive(root.right, success.key)
+#         return root
+#     def min_value_node(self, node):
+#         curr = node
+#         while curr.left is not None:
+#             curr = curr.left
+#         return curr
+
+
+# class TreeNode:
+#     def __init__(self, key):
+#         self.key = key
+#         self.left = None
+#         self.right = None
+# class BinarySTree:
+#     def __init__(self):
+#         self.root = None
+#     def insert(self, key):
+#         self.root = self.insert_recursive(self.root, key)
+#     def insert_recursive(self, root, key):
+#         if root is None:
+#             return TreeNode(key)
+#         if key < root.key:
+#             root.left = self.insert_recursive(root.left, key)
+#         else:
+#             root.right = self.insert_recursive(root.right, key)
+#         return root
+#     def delete(self, key):
+#         self.root = self.delete_recursive(self.root, key)
+#     def delete_recursive(self, root, key):
+#         if root is None:
+#             return root
+#         if key < root.key:
+#             root.left = self.delete_recursive(root.left, key)
+#         elif key > root.key:
+#             root.right = self.delete_recursive(root.right, key)
+#         else:
+#             if root.left is None:
+#                 return root.right
+#             elif root.right is None:
+#                 return root.left
+#             else:
+#                 success = self.min_value_node(root.right)
+#                 root.key = success.key
+#                 root.right = self.delete_recursive(root.right, success.key)
+#         return root
+#     def min_value_node(self, node):
+#         curr = node
+#         while curr.left is not None:
+#             curr = curr.left
+#         return curr
+    
+
+# class TreeNode:
+#     def __init__(self, key):
+#         self.key = key
+#         self.left = None
+#         self.right = None
+# class BinarySTree:
+#     def __init__(self):
+#         self.root = None
+#     def insert(self, key):
+#         self.root = self.insert_recursive(self.root, key)
+#     def insert_recursive(self, root, key):
+#         if root is None:
+#             return TreeNode(key)
+#         if key < root.key:
+#             root.left = self.insert_recursive(root.left, key)
+#         else:
+#             root.right = self.insert_recursive(root.right, key)
+#         return root
+#     def delete(self, key):
+#         self.root = self.delete_recursive(self.root, key)
+#     def delete_recursive(self, root, key):
+#         if root is None:
+#             return root
+#         if key < root.key:
+#             root.left = self.delete_recursive(root.left, key)
+#         elif key > root.key:
+#             root.right = self.delete_recursive(root.right, key)
+#         else:
+#             if root.left is None:
+#                 return root.right
+#             elif root.right is None:
+#                 return root.left
+#             else:
+#                 success = self.min_value_node(root.right)
+#                 root.key = success.key
+#                 root.right = self.delete_recursive(root.right, success.key)
+#         return root
+#     def min_value_node(self, node):
+#         curr = node
+#         while curr.left is not None:
+#             curr = curr.left
+#         return curr
+#     def search(self, key):
+#         return self.search_recursive(self.root, key)
+#     def search_recursive(self, root, key):
+#         if root is None or if root.key == key:
+#             return root.key if root else None
+#         if key < root.key:
+#             return self.search_recursive(root.left, key)
+#         return self.search_recursive(root.right, key)
+#     def inorder(self):
+#         return self.inorder_recursive(self.root)
+#     def inorder_recursive(self, root):
+#         res = []
+#         if root:
+#             res.extend(self.inorder_recursive(root.left))
+#             res.append(root.key)
+#             res.extend(self.inorder_recursive(root.right))
+#         return res
+#     def preorder(self):
+#         return self.preorder_recursive(self.root)
+#     def preorder_recursive(self, root):
+#         res = []
+#         if root:
+#             res.append(root.key)
+#             res.extend(self.preorder_recursive(root.left))
+#             res.extend(self.preorder_recursive(root.right))
+#         return res
+#     def postorder(self):
+#         return self.postorder_recursive(self.root)
+#     def postorder_recursive(self, root):
+#         res = []
+#         if root:
+#             res.extend(self.postorder_recursive(root.left))
+#             res.extend(self.postorder_recursive(root.right))
+#             res.append(root.key)
+#         return res
+
+
+# class MinHeap:
+#     def __init__(self):
+#         self.heap = []
+#     def build_heap(self, arr):
+#         self.heap = arr[:]
+#         n = len(self.heap)
+#         for i in range(n//2, -1, -1):
+#             self.heap_down(i)
+#     def insert(self, val):
+#         self.heap.append(val)
+#         self.heap_up(len(self.heap)-1)
+#     def heap_up(self, index):
+#         parent = (index - 1)//2
+#         while index > 0 and self.heap[parent] > self.heap[index]:
+#             self.swap(parent, index)
+#             index = parent
+#             parent = (index - 1)//2
+#     def heap_down(self, index):
+#         left = (2*index) + 1
+#         right = (2*index) + 2
+#         smallest = index
+#         if left < len(self.heap) and self.heap[left] < self.heap[smallest]:
+#             smallest = left
+#         if right < len(self.heap) and self.heap[right] < self.heap[smallest]:
+#             smallest = right
+#         if smallest != index:
+#             self.swap(smallest, index)
+#             self.heap_down(smallest)
+#     def swap(self, i, j):
+#         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
+#     def remove(self):
+#         if not self.heap:
+#             return None
+#         if len(self.heap) == 1:
+#             return self.heap.pop()
+#         self.swap(0,len(self.heap)-1)
+#         self.heap.pop()
+#         self.heap_down(0)
+#         return
+    
+# def heap_sort(arr):
+#     n = len(arr)
+#     for i in range(n//2, -1, -1):
+#         heapify(arr, i, n)
+#     for i in range(n-1, 0, -1):
+#         arr[0], arr[i] = arr[i], arr[0]
+#         heapify(arr, i, 0)
+#     return print(arr)
+# def heapify(arr, n, index):
+#     left = (2*index) + 1
+#     right = (2*index) + 2
+#     largest = index
+#     if left < n and arr[left] > arr[largest]:
+#         largest = left
+#     if right < n and arr[right] > arr[largest]:
+#         largest = right
+#     if largest != index:
+#         arr[largest], arr[index] = arr[index], arr[largest]
+#         heapify(arr, n, largest)
+
+
+# class TreeNode:
+#     def __init__(self, key):
+#         self.key = key
+#         self.left = None
+#         self.right = None
+# class BST:
+#     def __init__(self):
+#         self.root = None
+#     def insert(self, key):
+#         self.root = self.insertRec(self.root, key)
+#     def insertRec(self, root, key):
+#         if root is None:
+#             return TreeNode(key)
+#         if key < root.key:
+#             root.left = self.insertRec(root.left, key)
+#         else:
+#             root.right = self.insertRec(root.right, key)
+#         return root
+#     def delete(self, key):
+#         self.root = self.deleteRec(self.root, key)
+#     def deleteRec(self, root, key):
+#         if root is None:
+#             return root
+#         if key < root.key:
+#             root.left = self.deleteRec(root.left, key)
+#         elif key > root.key:
+#             root.right = self.deleteRec(root.right, key)
+#         else:
+#             if root.left is None:
+#                 return root.right
+#             elif root.right is None:
+#                 return root.left
+#             else:
+#                 success = self.min_val_node(root.right)
+#                 root.key = success.key
+#                 root.right = self.deleteRec(root.right, success.key)
+#         return root
+#     def min_val_node(self, node):
+#         curr = node
+#         while curr.left is not None:
+#             curr = curr.left
+#         return curr
+#     def search(self, key):
+#         return self.searchRec(self.root, key)
+#     def searchRec(self, root, key):
+#         if root is None or root.key == key:
+#             return root.key if root else None
+#         if key < root.key:
+#             return self.searchRec(root.left, key)
+#         return self.searchRec(root.right, key)
+#     def inorder(self):
+#         return self.inorderRec(self.root)
+#     def inorderRec(self, root):
+#         res = []
+#         if root:
+#             res.extend(self.inorderRec(root.left))
+#             res.append(root.key)
+#             res.extend(self.inorderRec(root.right))
+#         return res
+#     def preorder(self):
+#         return self.preorderRec(self.root)
+#     def preorderRec(self, root):
+#         res = []
+#         if root:
+#             res.append(root.key)
+#             res.extend(self.preorderRec(root.left))
+#             res.extend(self.preorderRec(root.right))
+#         return res
+#     def postorder(self):
+#         return self.postorderRec(self.root)
+#     def postorderRec(self, root):
+#         res = []
+#         if root:
+#             res.extend(self.postorderRec(root.left))
+#             res.extend(self.postorderRec(root.right)) 
+#             res.append(root.key)
+#         return res
+#     def minimum(self):
+#         if self.root is None:
+#             return None
+#         node = self.root
+#         while node.left is not None:
+#             node = node.left
+#         return node.key
+#     def maximum(self):
+#         if self.root is None:
+#             return None
+#         node = self.root
+#         while node.right is not None:
+#             node = node.right
+#         return node.key
+
+
+# class MinHeap:
+#     def __init__(self) -> None:
+#         self.heap = []
+#     def build_heap(self, arr):
+#         self.heap = arr[:]
+#         n = len(self.heap)
+#         for i in range(n//2, -1, -1):
+#             self.heap_down(i)
+#     def insert(self, val):
+#         self.heap.append(val)
+#         self.heap_up(len(self.heap)-1)
+#     def heap_up(self, index):
+#         parent = (index - 1)//2
+#         while index > 0 and self.heap[parent] > self.heap[index]:
+#             self.swap(parent, index)
+#             index = parent
+#             parent = (index - 1)//2
+#     def heap_down(self, index):
+#         left = (2*index) + 1
+#         right = (2*index) + 2
+#         smallest = index
+#         if left < len(self.heap) and self.heap[left] < self.heap[smallest]:
+#             smallest = left
+#         elif right < len(self.heap) and self.heap[right] < self.heap[smallest]:
+#             smallest = right
+#         if smallest != index:
+#             self.swap(smallest, index)
+#             self.heap_down(smallest)
+#     def swap(self, i, j):
+#         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
+#     def remove(self):
+#         if not self.heap:
+#             return None
+#         if len(self.heap) == 1:
+#             return self.heap.pop()
+#         self.swap(0, len(self.heap)-1)
+#         self.heap.pop()
+#         self.heap_down(0)
+#         return
+
+# def heap_sort(arr):
+#     n = len(arr)
+#     for i in range(n//2. -1, -1):
+#         heapify(arr, n, i)
+#     for i in range(n-1, 0, -1):
+#         arr[0], arr[i] = arr[i], arr[0]
+#         heapify(arr, i, 0)
+# def heapify(arr, n, index):
+#     left = (2*index) + 1
+#     right = (2*index) + 2
+#     largest = index
+#     if left < n and arr[left] > arr[largest]:
+#         largest = left
+#     elif right < n and arr[right] > arr[largest]:
+#         largest = right
+#     if largest != index:
+#         arr[largest], arr[index] = arr[index], arr[largest]
+#         heapify(arr, n, largest)
+# arr = [56,7,8,9,76,5]
+
+# class Graph:
+#     def __init__(self):
+#         self.graph = {}
+#     def insert_vertex(self, vertex):
+#         if vertex not in self.graph:
+#             self.graph[vertex] = []
+#     def add_edges(self, vertex, edge, bi=False):
+#         self.insert_vertex(vertex)
+#         self.insert_vertex(edge)
+#         self.graph[vertex].append(edge)
+#         if bi:
+#             self.graph[edge].append(vertex)
+#     def delete_vertex(self, vertex):
+#         for vtx, edg in self.graph.items():
+#             if vertex in edg:
+#                 self.graph[vtx].remove(vertex)
+#         del self.graph[vertex]
+
+#     def BFS(self):
+#         traversal = []
+#         for vertex in self.graph:
+#             if vertex not in traversal:
+#                 queue = [vertex]
+
+#                 while queue:
+#                     node = queue.pop(0)
+#                     if node not in traversal:
+#                         traversal.append(node)
+
+#                         for i in self.graph.get(node, []):
+#                             if i not in traversal:
+#                                 queue.append(i)
+#         return traversal
+#     def DFS(self):
+#         traversal = []
+#         def DFS_Util(vertex):
+#             traversal.append(vertex)
+#             for edge in self.graph.get(vertex, []):
+#                 if edge not in traversal:
+#                     DFS_Util(edge)
+#         for vertex in self.graph:
+#             if vertex not in traversal:
+#                 DFS_Util(vertex)
+#         return traversal
+
+class TrieNode:
+    def __init__(self) -> None:
+        self.children = {}
+        self.end_node = False
+class Trie:
+    def __init__(self) -> None:
+        self.root = TrieNode()
+    def insert(self, word):
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                node.children[char] = TrieNode()
+            node = node.children[char]
+        node.end_node = True
+    def search(self, word):
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                return False
+            node = node.children[char]
+        return node.end_node
+    def starts_with(self, prefix):
+        node = self.root
+        for char in prefix:
+            if char not in node.children:
+                return False
+            node = node.children[char]
+        return True
+    
