@@ -20,5 +20,4 @@ def heapify(arr,n,index):
         heapify(arr,n,largest)
 
 array = [3,5,6,8,93,2,66,9]
-
 heap_sort(array)

@@ -730,119 +730,115 @@
 #             raise Exception("stack is empty")
 #         return self.value[-1]
 
-class Node:
-    def __init__(self,key,value):
-        self.key = key
-        self.value = value
-        self.next = None
-class HashTable:
-    def __init__(self,size):
-        self.size = size
-        self.table = [None] * size
-    def hash_function(self,key):
-        return hash(key) % self.size
+# class Node:
+#     def __init__(self,key,value):
+#         self.key = key
+#         self.value = value
+#         self.next = None
+# class HashTable:
+#     def __init__(self,size):
+#         self.size = size
+#         self.table = [None] * size
+#     def hash_function(self,key):
+#         return hash(key) % self.size
     
-    def put(self,key,value):
-        index = self.hash_function(key)
-        if not self.table[index]:
-            self.table[index] = Node(key,value)
-        else:
-            node = self.table[index]
-            while node.next:
-                if node.key == key:
-                    node.value = value
-                    return
-                node = node.next
-            node.next = Node(key, value)
+#     def put(self,key,value):
+#         index = self.hash_function(key)
+#         if not self.table[index]:
+#             self.table[index] = Node(key,value)
+#         else:
+#             node = self.table[index]
+#             while node.next:
+#                 if node.key == key:
+#                     node.value = value
+#                     return
+#                 node = node.next
+#             node.next = Node(key, value)
 
-    def get(self, key):
-        index = self.hash_function(key)
-        node = self.table[index]
-        while node:
-            if node.key == key:
-                return node.value
-            node = node.next
-        raise KeyError("Key not found")
+#     def get(self, key):
+#         index = self.hash_function(key)
+#         node = self.table[index]
+#         while node:
+#             if node.key == key:
+#                 return node.value
+#             node = node.next
+#         raise KeyError("Key not found")
     
-    def remove(self, key):
-        index = self.hash_function(key)
-        if not self.table[index]:
-            raise KeyError("Key not found")
-        if self.table[index].key == key:
-            self.table[index] = self.table[index].next
-            return
-        prev = None
-        curr = self.table[index]
-        while curr:
-            if curr.key == key:
-                prev.next = curr.next
-                return
-            prev = curr
-            curr = curr.next
-        raise KeyError("Key not found")
+#     def remove(self, key):
+#         index = self.hash_function(key)
+#         if not self.table[index]:
+#             raise KeyError("Key not found")
+#         if self.table[index].key == key:
+#             self.table[index] = self.table[index].next
+#             return
+#         prev = None
+#         curr = self.table[index]
+#         while curr:
+#             if curr.key == key:
+#                 prev.next = curr.next
+#                 return
+#             prev = curr
+#             curr = curr.next
+#         raise KeyError("Key not found")
     
-ht = HashTable(10)
-ht.put("apple",8)
-ht.put(7,"banana")
-ht.put(5,"orange")
-ht.put(3,"grapefruit")
-ht.put(1,"kiwi")
-print(ht.get("apple"))
-ht.remove(5)
-print(ht.get(5))
+# ht = HashTable(10)
+# ht.put("apple",8)
+# ht.put(7,"banana")
+# ht.put(5,"orange")
+# ht.put(3,"grapefruit")
+# ht.put(1,"kiwi")
+# print(ht.get("apple"))
+# ht.remove(5)
+# print(ht.get(5))
 
 
-class Node:
-    def __init__(self,key,value):
-        self.key = key
-        self.value = value
-        self.next = None
-class HashTable:
-    def __init__(self,size):
-        self.size = size
-        self.table = [None] * size
-    def hashFunction(self,key):
-        return hash(key) % self.size
+# class Node:
+#     def __init__(self,key,value):
+#         self.key = key
+#         self.value = value
+#         self.next = None
+# class HashTable:
+#     def __init__(self,size):
+#         self.size = size
+#         self.table = [None] * size
+#     def hashFunction(self,key):
+#         return hash(key) % self.size
     
-    def put(self,key,value):
-        index = self.hashFunction(key)
-        if not self.table[index]:
-            self.table[index] = Node(key,value)
-        else:
-            node = self.table[index]
-            while node.next:
-                if node.key == key:
-                    node.value = value
-                    return
-                node = node.next
-            node.next = Node(key,value)
+#     def put(self,key,value):
+#         index = self.hashFunction(key)
+#         if not self.table[index]:
+#             self.table[index] = Node(key,value)
+#         else:
+#             node = self.table[index]
+#             while node.next:
+#                 if node.key == key:
+#                     node.value = value
+#                     return
+#                 node = node.next
+#             node.next = Node(key,value)
 
-    def get(self,key):
-        index = self.hashFunction(key)
-        node = self.table[index]
-        while node:
-            if node.key == key:
-                return node.value
-            node = node.next
-        raise KeyError("key not found")
+#     def get(self,key):
+#         index = self.hashFunction(key)
+#         node = self.table[index]
+#         while node:
+#             if node.key == key:
+#                 return node.value
+#             node = node.next
+#         raise KeyError("key not found")
     
-    def remove(self,key):
-        index = self.hashFunction(key)
-        if not self.table[index]:
-            raise KeyError("key not found")
-        if self.table[index].key == key:
-            self.table[index] == self.table[index].next
-            return
-        prev = None
-        curr = self.table[index]
-        while curr:
-            if curr.key == key:
-                prev.next = curr.next
-                return
-            prev = curr
-            curr = curr.next
-        raise KeyError("Key not found")
-    
-
-
-
+#     def remove(self,key):
+#         index = self.hashFunction(key)
+#         if not self.table[index]:
+#             raise KeyError("key not found")
+#         if self.table[index].key == key:
+#             self.table[index] == self.table[index].next
+#             return
+#         prev = None
+#         curr = self.table[index]
+#         while curr:
+#             if curr.key == key:
+#                 prev.next = curr.next
+#                 return
+#             prev = curr
+#             curr = curr.next
+#         raise KeyError("Key not found")

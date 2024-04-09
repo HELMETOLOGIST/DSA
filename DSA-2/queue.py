@@ -12,8 +12,7 @@ class Queue:
         if len(self.queue) > 0:
             return self.queue.pop()
         return ("Queue is Empty")
-
-    
+ 
     def size(self):
         return len(self.queue)
     
@@ -31,7 +30,6 @@ print(TheQueue.dequeue())
 print(TheQueue.dequeue())
 print(TheQueue.dequeue())
 print(TheQueue.dequeue())
-
 
 
 class Queue:

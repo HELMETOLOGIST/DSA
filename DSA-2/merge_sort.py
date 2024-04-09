@@ -8,7 +8,6 @@ def merge_sort(arr):
 
     left_half = merge_sort(left_half)
     right_half = merge_sort(right_half)
-
     return merge(left_half,right_half)
 
 def merge(left, right):
@@ -31,7 +30,6 @@ def merge(left, right):
     while right_index < len(right):
         merged.append(right[right_index])
         right_index += 1
-
     return merged
 
 arr = [8,76,54,38,6,53]

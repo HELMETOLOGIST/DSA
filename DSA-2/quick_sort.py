@@ -12,8 +12,6 @@ arr = [23, 12, 54, 11, 46, 72, 83, 33, 6]
 qs = quick_sort(arr)
 print(qs)
 
-
 for i in arr[:-1]:
     print(i, end=', ')
-
 print(54<46)
